@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.producttracker.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/fab_margin">
+
+        <ImageView
+            android:id="@+id/detail_product_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/product_image_height"
+            android:contentDescription="@string/product_image_text"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/kettlebell" />
+
+            <TextView
+                android:id="@+id/detail_product_name"
+                style="@style/DetailText"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:paddingTop="@dimen/fab_margin"
+                android:paddingBottom="@dimen/fab_margin"
+                tools:text="Product name" />
+
+            <TextView
+                android:id="@+id/detail_product_price"
+                style="@style/DetailText"
+                tools:text="Price" />
+
+            <TextView
+                android:id="@+id/detail_product_desc"
+                style="@style/DetailText"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin"
+                android:textSize="@dimen/label_text_size"
+                tools:text="This text is a product description. I insert here a long text because the description text is a longer type of text amingst the texts and now I need a long text as a sample text." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/detail_minus_button"
+                style="@style/PlusButton"
+                android:src="@drawable/ic_remove"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/plus_button_size"
+                android:layout_marginRight="@dimen/plus_button_size"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/DetailText"
+                    android:text="@string/on_stock_text" />
+
+                <TextView
+                    android:id="@+id/detail_product_quantity"
+                    style="@style/DetailText"
+                    tools:text="13 pieces" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/detail_plus_button"
+                style="@style/PlusButton"
+                android:src="@drawable/ic_add"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/detail_order_button"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/list_item_padding"
+            android:text="@string/order_menu_item_title" />
+
+    </LinearLayout>
+
+</ScrollView>

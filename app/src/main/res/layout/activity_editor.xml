@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.producttracker.EditorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/list_padding">
+
+        <LinearLayout style="@style/EditorContainer">
+
+            <TextView
+                style="@style/EditorLabel"
+                android:text="@string/label_product_name" />
+
+            <EditText
+                android:id="@+id/editor_name_field"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/multiline_container_height"
+            android:padding="@dimen/list_padding">
+
+            <TextView
+                style="@style/EditorLabel"
+                android:text="@string/label_product_description" />
+
+            <EditText
+                android:id="@+id/editor_desc_field"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/multiline_text_height"
+                android:layout_weight="3"
+                android:inputType="textMultiLine" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/EditorContainer">
+
+            <TextView
+                style="@style/EditorLabel"
+                android:text="@string/label_product_quantity" />
+
+            <EditText
+                android:id="@+id/editor_quantity_field"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/pieces"
+                android:textSize="@dimen/label_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/EditorContainer">
+
+            <TextView
+                style="@style/EditorLabel"
+                android:text="@string/label_product_price" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/euro_sign"
+                android:textSize="@dimen/label_text_size" />
+
+            <EditText
+                android:id="@+id/editor_price_field"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/price_ending"
+                android:textSize="@dimen/label_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/EditorContainer">
+
+            <TextView
+                style="@style/EditorLabel"
+                android:text="@string/product_image_text" />
+
+            <Button
+                android:id="@+id/upload_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/upload_button_margin_left"
+                android:layout_marginRight="@dimen/upload_button_margin_right"
+                android:layout_weight="3"
+                android:text="@string/upload_button_text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/EditorContainer"
+            android:layout_height="@dimen/download_image_size">
+
+            <TextView
+                style="@style/EditorLabel"
+                android:text="@string/product_image_text" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3">
+
+                <TextView
+                    android:id="@+id/editor_empty_image_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/list_padding"
+                    android:visibility="gone"
+                    android:text="@string/no_image_text" />
+
+                <ImageView
+                    android:id="@+id/editor_image"
+                    android:layout_width="@dimen/download_image_size"
+                    android:layout_height="@dimen/download_image_size" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

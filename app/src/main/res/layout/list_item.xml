@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:padding="@dimen/list_item_padding"
+    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/big_text_size"
+        tools:text="Product name"/>
+
+    <TextView
+        android:id="@+id/item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/list_padding"
+        tools:text="On stock: 13"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_price"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/big_text_size"
+        android:layout_gravity="center_vertical"
+        android:textAlignment="center"
+        tools:text="€ 2,-"/>
+
+    <ImageView
+        android:id="@+id/button_sale"
+        android:background="@drawable/background_circle"
+        android:layout_width="@dimen/plus_button_size"
+        android:layout_height="@dimen/plus_button_size"
+        android:src="@drawable/ic_shopping_cart"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+</LinearLayout>
